@@ -6,10 +6,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch homework",
+            "request": "launch",
+            "mainClass": "homework",
+            "projectName": "w01_funktsioon_e0684c0"
+        },
+        {
+            "type": "java",
             "name": "Launch First",
             "request": "launch",
             "mainClass": "First",
-            "projectName": "w01_funktsioon_2a89469e"
+            "projectName": "w01_funktsioon"
         },
         {
             "type": "java",
