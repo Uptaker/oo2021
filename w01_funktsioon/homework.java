@@ -1,6 +1,6 @@
 import java.util.*; // ArrayList + Scanner
 
-public class homework {
+public class Homework {
     public static void main(String[] args) {
         initList();
     }
@@ -77,13 +77,11 @@ public class homework {
 // it."
 // seega kasutasin ArrayListi.
 
-// 3. .length asemel .size() ArrayListi puhul
-
-// 4. see kood andis tagasi 'insert a valid command' topelt:
+// 3. see kood andis tagasi 'insert a valid command' topelt:
 // int remove = input.nextInt();
 // asendasin stringiga ning konverteerisin integeriks
 
-// 5. kui delete'is kirjutad stringi, siis tuleb error. try {} catch {}
+// 4. kui delete'is kirjutad stringi, siis tuleb error. try {} catch {}
 // lahendab seda, aga ma ei tea, kas see pole veidi hacky?
 
 // try { System.out.println("DELETED " + list.get(removeInt));
