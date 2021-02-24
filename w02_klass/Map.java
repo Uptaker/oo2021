@@ -3,9 +3,10 @@ import java.util.HashMap;
 
 // MAKE THIS WORK WITH LangDefinitions.java
 public class Map {
+    static HashMap<String, String> languages = new HashMap<String, String>();
 
     public static void main(String[] args) {
-        HashMap<String, String> languages = new HashMap<String, String>();
+
         addLang("java", "A different word for coffee.");
         addLang("javascript", "A set of instructions on how to use a device for the purposes of brewing coffee.");
         addLang("python", "A very large and thick snake");
