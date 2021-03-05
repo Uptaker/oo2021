@@ -1,0 +1,4 @@
+1000,Markus,java,2021
+2000,Raimo,java,2000
+3000,Karl,c++,1990
+1500,Hello,world,1000

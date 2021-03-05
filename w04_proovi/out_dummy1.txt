@@ -1,0 +1,4 @@
+Number is 1000 and name is Markus and lang is java and year is 2021
+Number is 2000 and name is Raimo and lang is java and year is 2000
+Number is 3000 and name is Karl and lang is c++ and year is 1990
+Number is 1500 and name is Hello and lang is world and year is 1000
