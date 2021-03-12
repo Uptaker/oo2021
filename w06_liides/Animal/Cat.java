@@ -27,7 +27,19 @@ public class Cat implements Animal {
     }
 
     @Override
-    public String attack(Animal victim) {
+    public String defend() {
+        this.defending = true;
+        return "Defending!";
+    }
+
+    @Override
+    public String attack(Cat victim) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String attack(Dog victim) {
         if (victim.defending == true) {
             System.out.println("Opponent was defending and took no damage!");
         } else if (this.sneaky) {
@@ -38,11 +50,5 @@ public class Cat implements Animal {
             victim.health--;
         }
         return "Opponent health: " + victim.health;
-    }
-
-    @Override
-    public String defend() {
-        this.defending = true;
-        return "Defending!";
     }
 }

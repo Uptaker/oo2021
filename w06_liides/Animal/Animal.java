@@ -11,7 +11,9 @@ public interface Animal {
 
     public String lookAround();
 
-    public String attack(Animal victim);
+    public String attack(Dog victim);
+
+    public String attack(Cat victim);
 
     public String defend();
 }
