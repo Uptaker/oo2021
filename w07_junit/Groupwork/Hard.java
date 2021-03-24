@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Normal implements Difficulty {
+public class Hard implements Difficulty {
     public String word;
     public String attemptedLetters = "";
     public String[] wordLetters;
@@ -27,6 +27,8 @@ public class Normal implements Difficulty {
             System.out.println("|____________|");
             break;
         case 2:
+
+            System.out.println("  __________");
             System.out.println("  |");
             System.out.println("  |");
             System.out.println("  |");
@@ -39,8 +41,8 @@ public class Normal implements Difficulty {
             break;
         case 3:
             System.out.println("  __________");
-            System.out.println("  |");
-            System.out.println("  |");
+            System.out.println("  |        |");
+            System.out.println("  |        O");
             System.out.println("  |");
             System.out.println("  |");
             System.out.println("  |");
@@ -50,65 +52,6 @@ public class Normal implements Difficulty {
             System.out.println("|____________|");
             break;
         case 4:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 5:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 6:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|");
-            System.out.println("  |        |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 7:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|");
-            System.out.println("  |        |");
-            System.out.println("  |       /");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 8:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|\\");
-            System.out.println("  |        |");
-            System.out.println("  |       /");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-        case 9:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -127,7 +70,8 @@ public class Normal implements Difficulty {
     @Override
     // picks a random word from a text file
     public void pickWord() throws IOException {
-        File file = new File("normal.txt"); // word list from https://gist.github.com/deekayen/4148741
+        File file = new File("hard.txt"); // word list from
+                                          // https://github.com/gdstout/hardhangman/blob/master/hard_words.txt
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line = br.readLine();

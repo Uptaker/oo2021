@@ -5,8 +5,6 @@ public interface Difficulty {
 
     public void pickWord() throws IOException;
 
-    public void checkLetter();
-
     public void result(int integer);
 
     public void startGame(Scanner sc) throws IOException;
