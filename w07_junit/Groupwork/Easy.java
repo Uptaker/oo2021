@@ -171,7 +171,6 @@ public class Easy implements Difficulty {
         br.close();
         int rand = (int) (Math.random() * count + 1);
         this.word = array.get(rand);
-        System.out.println(this.word);
     }
 
     @Override
