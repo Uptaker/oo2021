@@ -1,3 +1,5 @@
+package org.teamwork;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -5,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Easy implements Difficulty {
+public class Hard implements Difficulty {
     public String word;
     public String attemptedLetters = "";
     public String[] wordLetters;
@@ -21,123 +23,37 @@ public class Easy implements Difficulty {
     public void result(int step) {
         switch (step) {
         case 1:
+            System.out.println("__________");
+            System.out.println("|        |");
+            System.out.println("|        |___");
             System.out.println("|____________|");
             break;
         case 2:
 
+            System.out.println("  __________");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("__|_______");
             System.out.println("|        |");
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
         case 3:
+            System.out.println("  __________");
+            System.out.println("  |        |");
+            System.out.println("  |        O");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
             System.out.println("__|_______");
             System.out.println("|        |");
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
         case 4:
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 5:
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 6:
-            System.out.println("  ____");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 7:
-            System.out.println("  __________");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 8:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 9:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 10:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|");
-            System.out.println("  |        |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 11:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|");
-            System.out.println("  |        |");
-            System.out.println("  |       /");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 12:
-            System.out.println("  __________");
-            System.out.println("  |        |");
-            System.out.println("  |        O");
-            System.out.println("  |       /|\\");
-            System.out.println("  |        |");
-            System.out.println("  |       /");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-        case 13:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -156,7 +72,8 @@ public class Easy implements Difficulty {
     @Override
     // picks a random word from a text file
     public void pickWord() throws IOException {
-        File file = new File("easy.txt"); // word list from https://gist.github.com/deekayen/4148741
+        File file = new File("../hard.txt"); // word list from
+                                          // https://github.com/gdstout/hardhangman/blob/master/hard_words.txt
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line = br.readLine();
@@ -175,7 +92,7 @@ public class Easy implements Difficulty {
 
     @Override
     public void startGame(Scanner s) throws IOException {
-        System.out.println("Welcome! You've picked the EASY difficulty");
+        System.out.println("Welcome! You've picked the Hard difficulty");
         this.pickWord();
         System.out.println("Your genereated word is: " + hiddenWord() + ". Good luck!");
         this.active = true;

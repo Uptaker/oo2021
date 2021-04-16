@@ -90,7 +90,7 @@ public class Hard implements Difficulty {
 
     @Override
     public void startGame(Scanner s) throws IOException {
-        System.out.println("Welcome! You've picked the NORMAL difficulty");
+        System.out.println("Welcome! You've picked the HARD difficulty");
         this.pickWord();
         System.out.println("Your genereated word is: " + hiddenWord() + ". Good luck!");
         this.active = true;

@@ -1,3 +1,5 @@
+package org.teamwork;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -5,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Easy implements Difficulty {
+public class Normal implements Difficulty {
     public String word;
     public String attemptedLetters = "";
     public String[] wordLetters;
@@ -21,52 +23,23 @@ public class Easy implements Difficulty {
     public void result(int step) {
         switch (step) {
         case 1:
+            System.out.println("__________");
+            System.out.println("|        |");
+            System.out.println("|        |___");
             System.out.println("|____________|");
             break;
         case 2:
-
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("  |");
+            System.out.println("__|_______");
             System.out.println("|        |");
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
         case 3:
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 4:
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 5:
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 6:
-            System.out.println("  ____");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("  |");
-            System.out.println("__|_______");
-            System.out.println("|        |");
-            System.out.println("|        |___");
-            System.out.println("|____________|");
-            break;
-        case 7:
             System.out.println("  __________");
             System.out.println("  |");
             System.out.println("  |");
@@ -78,7 +51,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
-        case 8:
+        case 4:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |");
@@ -90,7 +63,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
-        case 9:
+        case 5:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -102,7 +75,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
-        case 10:
+        case 6:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -114,7 +87,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
-        case 11:
+        case 7:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -126,7 +99,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |___");
             System.out.println("|____________|");
             break;
-        case 12:
+        case 8:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -137,7 +110,7 @@ public class Easy implements Difficulty {
             System.out.println("|        |");
             System.out.println("|        |___");
             System.out.println("|____________|");
-        case 13:
+        case 9:
             System.out.println("  __________");
             System.out.println("  |        |");
             System.out.println("  |        O");
@@ -156,7 +129,7 @@ public class Easy implements Difficulty {
     @Override
     // picks a random word from a text file
     public void pickWord() throws IOException {
-        File file = new File("easy.txt"); // word list from https://gist.github.com/deekayen/4148741
+        File file = new File("../Normal.txt"); // word list from https://gist.github.com/deekayen/4148741
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line = br.readLine();
@@ -175,7 +148,7 @@ public class Easy implements Difficulty {
 
     @Override
     public void startGame(Scanner s) throws IOException {
-        System.out.println("Welcome! You've picked the EASY difficulty");
+        System.out.println("Welcome! You've picked the NORMAL difficulty");
         this.pickWord();
         System.out.println("Your genereated word is: " + hiddenWord() + ". Good luck!");
         this.active = true;

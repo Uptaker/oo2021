@@ -1,3 +1,5 @@
+package org.teamwork;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -156,7 +158,7 @@ public class Easy implements Difficulty {
     @Override
     // picks a random word from a text file
     public void pickWord() throws IOException {
-        File file = new File("easy.txt"); // word list from https://gist.github.com/deekayen/4148741
+        File file = new File("../easy.txt"); // word list from https://gist.github.com/deekayen/4148741
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         String line = br.readLine();
