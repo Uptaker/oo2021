@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+
+    <p>Welcome <span th:text="${name}"></span></p>
+    <p>Random message: <span th:text="${randMsg}"></span></p>
+
+    <form action="#" th:action="@{/addedTask}" th:object="${task}" method="post">
+        <!-- <label for="id">Id:</label>
+        <input type="number" id="id" name="id" placeholder="id"> -->
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" placeholder="Your task here!">
+        <input type="submit">
+    </form>
+
+    <span th:text="${result}"></span>
+</body>
+</html>

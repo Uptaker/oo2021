@@ -1,0 +1,5 @@
+INSERT INTO task (id,description) VALUES (1,'do dishes');
+INSERT INTO task (id,description) VALUES (2,'make breakfast');
+INSERT INTO task (id,description) VALUES (3,'play doom');
+INSERT INTO task (id,description) VALUES (4,'do homework');
+INSERT INTO task (id,description) VALUES (5,'learn Spring Boot');

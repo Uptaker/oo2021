@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <section>
+        <h2>Sign up</h2>
+    </section>
+    <section>
+        <form action="#" th:action="@{/addTask}" th:object="${task}" method="post">
+
+            <label for="todo">Task</label><br>
+            <input th:field="*{todo}" type="text" name="todo" id="todo">
+    
+    
+            <label for="desc">Description</label><br>
+            <textarea th:field="*{desc}" type="text" name="desc" id="desc" style="resize: none;"></textarea>
+    
+            <button type="submit" class="navButton">Add task</button>
+
+            <span class="error" th:if="${#fields.hasErrors('desc')}" th:errors="*{desc}"></span><br/>
+            <span class="error" th:if="${#fields.hasErrors('todo')}" th:errors="*{todo}"></span><br/>
+    
+    
+        </form>
+    </section>
+
+</body>
+</html>

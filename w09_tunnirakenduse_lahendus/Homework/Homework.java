@@ -12,15 +12,25 @@ public class Homework {
 
         // int[] ints = ages.stream().mapToInt(i -> i).toArray();
         // convert from ArrayList to int[] to be able to use IntStream
-        // uus - mapToInt()
 
-        // Will they run in the same order?
-        new Thread(getAmount(ages)).start();
-        new Thread(getUnder18(ages)).start();
-        new Thread(getOver18(ages)).start();
-        new Thread(getPensionEligible(ages)).start();
-        new Thread(getAverageAge(ages)).start();
-        new Thread(getOver100(ages)).start();
+        // uus - mapToInt(), getAsDouble()
+
+        // Run every second
+        try {
+            new Thread(getAmount(ages)).start();
+            Thread.sleep(1000);
+            new Thread(getUnder18(ages)).start();
+            Thread.sleep(1000);
+            new Thread(getOver18(ages)).start();
+            Thread.sleep(1000);
+            new Thread(getPensionEligible(ages)).start();
+            Thread.sleep(1000);
+            new Thread(getAverageAge(ages)).start();
+            Thread.sleep(1000);
+            new Thread(getOver100(ages)).start();
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
 
     }
 
@@ -40,28 +50,28 @@ public class Homework {
     public static Runnable getAmount(ArrayList<Integer> ages) {
         return () -> {
             // how many people are in this file
-            System.out.println("Number of people: " + ages.stream().count());
+            System.out.println("Number of people: " + ages.stream().count() + " people");
         };
     }
 
     public static Runnable getUnder18(ArrayList<Integer> ages) {
         return () -> {
             // how many of them are under 18
-            System.out.println("Under 18: " + ages.stream().filter(e -> e < 18).count());
+            System.out.println("Under 18: " + ages.stream().filter(e -> e < 18).count() + " underage");
         };
     }
 
     public static Runnable getOver18(ArrayList<Integer> ages) {
         return () -> {
             // how many of them are over 18
-            System.out.println("Over 18: " + ages.stream().filter(e -> e > 18).count());
+            System.out.println("Over 18: " + ages.stream().filter(e -> e > 18).count() + " adults");
         };
     }
 
     public static Runnable getPensionEligible(ArrayList<Integer> ages) {
         return () -> {
             // how many of them can apply for a pension
-            System.out.println("Eligible for pension: " + ages.stream().filter(e -> e >= 65).count());
+            System.out.println("Eligible for pension: " + ages.stream().filter(e -> e >= 65).count() + " seniors");
         };
     }
 
@@ -69,7 +79,7 @@ public class Homework {
         return () -> {
             int[] ints = ages.stream().mapToInt(i -> i).toArray();
             // average age
-            System.out.println("Average age: " + IntStream.of(ints).average().getAsDouble());
+            System.out.println("Average age: " + IntStream.of(ints).average().getAsDouble() + " years old");
         };
     }
 

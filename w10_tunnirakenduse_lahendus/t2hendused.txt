@@ -1,0 +1,35 @@
+CRUD
+Create, read, update, delete
+CrudRepository sees on hulk funktsioone, mis teevad päringud meie eest
+
+@Repository
+Annab Springile teada, et antud interface käsitleda kui andmebaasi repositooriumina.
+
+@AutoWired
+Otsib objekti Spring konteineris.
+
+@Valid
+valideerib argumenti ja annab exceptioni, kui ei kehti.
+
+@Controller
+lehekülje suunaja
+
+@RequestParam("blabla")
+Requestib muutuja lehelt ?blabla väärtuse
+note: viskab errori, kui ei ole muutujat.
+
+@Component
+Spring objekt. Ei pea klassi välja kutsuma [nagu new Class = Class()], vaid Spring juba automaatselt laeb selle.
+// turns object into a spring "bean" and can be used everywhere
+
+//HttpServletRequest
+GET request (muutujad URList)
+
+//@RequestMapping
+nt RequestMapping("home") avab misiganes lehe sa returnid, kui kasutaja läheb url:/home
+
+@PostMapping
+@RequestMapping(method = RequestMethod.POST) lühend. Teeb POST requesti
+
+@GetMapping
+Teeb GET requesti
