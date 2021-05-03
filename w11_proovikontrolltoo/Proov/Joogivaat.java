@@ -40,7 +40,7 @@ public class Joogivaat {
                 filled = true;
             }
         }
-        System.out.println("Pudelid täidetud!");
+        System.out.println("Pudelid täidetud! Joogivaatis jäi " + this.kogus + " liitrit");
         return pudelid;
     }
 }

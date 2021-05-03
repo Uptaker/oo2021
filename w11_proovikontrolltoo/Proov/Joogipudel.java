@@ -26,10 +26,6 @@ public class Joogipudel {
         return this.maht;
     }
 
-    public void setMaht(double maht) {
-        this.maht = maht;
-    }
-
     public boolean isT2idetud() {
         return this.t2idetud;
     }
