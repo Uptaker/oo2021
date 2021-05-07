@@ -9,7 +9,9 @@ package org.tammeoja;
 // CHECK: Loo liidest realiseeriv klass Lause.
 // CHECK: Lauselt saab lisaks küsida sõnade arvu
 // CHECK: ning Sõna-klassi eksemplaride massiivi. 
-// Koosta rakendus, kus saab ette anda lause ning väljastatakse a-tähtede arv terves lauses ning igas sõnas eraldi. Koosta automaattest lause a-tähtede arvu kontrolli õigsuse kohta.
+
+// CHECK: Koosta rakendus, kus saab ette anda lause ning väljastatakse a-tähtede arv terves lauses ning igas sõnas eraldi. 
+// NOT YET Koosta automaattest lause a-tähtede arvu kontrolli õigsuse kohta.
 // * Kõik lausetes leidunud eri sõnad lisatakse faili. Rakenduse väljundis näidatakse, millised sõnad on sisendlausest uued ning millised juba varem olemas olnud. 
 
 public class Main {
@@ -20,7 +22,7 @@ public class Main {
         System.out.println(word.howManyLetters('l'));
 
         // how many x letters in this sentence
-        Sentence sentence = new Sentence("i am a sentence weee look at me xxx");
+        Sentence sentence = new Sentence("i am a sentence weee look at me AAAAA");
         System.out.println(sentence.howManyLetters('x'));
 
         // how many words in sentence
@@ -28,5 +30,8 @@ public class Main {
 
         // request list of Word class words from sentence
         System.out.println(sentence.requestWordList());
+
+        // how many a letters are in the sentence
+        System.out.println(sentence.howManyALetters());
     }
 }

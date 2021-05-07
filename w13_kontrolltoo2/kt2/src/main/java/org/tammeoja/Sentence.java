@@ -19,6 +19,27 @@ public class Sentence implements WordInterface {
         return count;
     }
 
+    public int howManyALetters() {
+        int inSentenceCount = 0;
+        String[] arr = this.sentence.toLowerCase().split(" ");
+
+        // each word
+        for (int i = 0; i < arr.length; i++) {
+            int inWordCount = 0;
+
+            // each character in word
+            for (int j = 0; j < arr[i].length(); j++) {
+                if (arr[i].charAt(j) == 'a') {
+                    inWordCount++;
+                    inSentenceCount++;
+                }
+            }
+            System.out.println("'A' letters in " + arr[i] + ": " + inWordCount);
+        }
+        return inSentenceCount;
+
+    }
+
     public List<Word> requestWordList() {
         String[] arr = this.sentence.split(" ");
         List<Word> wordObj = new ArrayList<>();
