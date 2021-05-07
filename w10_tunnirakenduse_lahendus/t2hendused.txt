@@ -16,11 +16,20 @@ lehekülje suunaja
 
 @RequestParam("blabla")
 Requestib muutuja lehelt ?blabla väärtuse
-note: viskab errori, kui ei ole muutujat.
+note: viskab errori, kui ei ole muutujat (vähemalt mul).
 
 @Component
 Spring objekt. Ei pea klassi välja kutsuma [nagu new Class = Class()], vaid Spring juba automaatselt laeb selle.
 // turns object into a spring "bean" and can be used everywhere
+
+JPA
+klasside ja meetodite kollekstioon, et töödelda relatsiooniliste/sql andmebaasiga
+
+DAO
+Data Access Object - class/interface, mis annab ligipääsu andmetele. (ei pea päringuid ise kirjutama)
+
+H2
+Mälus asuv andmebaas
 
 //HttpServletRequest
 GET request (muutujad URList)
