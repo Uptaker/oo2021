@@ -1,6 +1,10 @@
 package org.tammeoja;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Sentence implements WordInterface {
@@ -8,6 +12,23 @@ public class Sentence implements WordInterface {
 
     public Sentence(String sentence) {
         this.sentence = sentence;
+    }
+
+    public void PrintUniqueWordsToFile() throws IOException {
+        PrintWriter pw = new PrintWriter(new FileWriter("unique_words.txt"));
+        List<String> uniques = new ArrayList<>();
+        List<String> allWords = Arrays.asList(this.sentence.split(" "));
+
+        for (int i = 0; i < allWords.size(); i++) {
+            String sona = allWords.get(i);
+            if (!uniques.contains(sona)) {
+                pw.println(sona);
+                uniques.add(sona);
+            }
+
+        }
+        pw.close();
+        System.out.println("Printed " + uniques.size() + " unique words out of the " + allWords.size() + " given");
     }
 
     public int howManyWords() {
