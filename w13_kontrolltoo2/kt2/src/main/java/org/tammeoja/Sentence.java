@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Sentence implements WordInterface {
+public class Sentence implements LetterCountInterface {
     public String sentence;
 
     public Sentence(String sentence) {
@@ -20,15 +20,17 @@ public class Sentence implements WordInterface {
         List<String> allWords = Arrays.asList(this.sentence.split(" "));
 
         for (int i = 0; i < allWords.size(); i++) {
-            String sona = allWords.get(i);
-            if (!uniques.contains(sona)) {
-                pw.println(sona);
-                uniques.add(sona);
+            String word = allWords.get(i);
+            if (!uniques.contains(word)) {
+                pw.println(word);
+                uniques.add(word);
+                System.out.println("Added new word: " + word);
+            } else {
+                System.out.println("Skipping duplicate: " + word);
             }
-
         }
         pw.close();
-        System.out.println("Printed " + uniques.size() + " unique words out of the " + allWords.size() + " given");
+        System.out.println("Printed " + uniques.size() + " unique words out of " + allWords.size() + " given");
     }
 
     public int howManyWords() {

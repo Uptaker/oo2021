@@ -14,7 +14,7 @@ import java.io.IOException;
 
 // CHECK: Koosta rakendus, kus saab ette anda lause ning väljastatakse a-tähtede arv terves lauses ning igas sõnas eraldi. 
 // NOT YET Koosta automaattest lause a-tähtede arvu kontrolli õigsuse kohta.
-// * Kõik lausetes leidunud eri sõnad lisatakse faili. Rakenduse väljundis näidatakse, millised sõnad on sisendlausest uued ning millised juba varem olemas olnud. 
+// CHECK: Kõik lausetes leidunud eri sõnad lisatakse faili. Rakenduse väljundis näidatakse, millised sõnad on sisendlausest uued ning millised juba varem olemas olnud. 
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -36,6 +36,7 @@ public class Main {
         // how many a letters are in the sentence
         System.out.println(sentence.howManyALetters());
 
+        // print all unique words to a file
         sentence.PrintUniqueWordsToFile();
 
     }

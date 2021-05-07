@@ -1,6 +1,6 @@
 package org.tammeoja;
 
-public class Word implements WordInterface {
+public class Word implements LetterCountInterface {
 
     public String word;
 

@@ -1,5 +1,5 @@
 package org.tammeoja;
 
-public interface WordInterface {
+public interface LetterCountInterface {
     public int howManyLetters(char letter);
 }
