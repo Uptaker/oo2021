@@ -20,4 +20,9 @@ public class Word implements WordInterface {
         return count;
     }
 
+    @Override
+    public String toString() {
+        return word;
+    }
+
 }
